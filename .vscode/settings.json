@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "arduino.h": "c",
+        "hardwareserial.h": "c",
+        "stream.h": "c"
+    }
+}
