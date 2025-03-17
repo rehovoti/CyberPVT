@@ -1,15 +1,6 @@
 #include <Arduino.h>
 #include <Pump.h>
-
-int count1 = 0;
-
-void task1(void* parameters) {
-  for(;;) {
-    Serial.print("Task 1 counter: ");
-    Serial.println(count1++);
-    vTaskDelay(1000 / portTICK_PERIOD_MS);
-  }
-}
+#include <Measurements.h>
 
 void setup() {
 
@@ -17,8 +8,8 @@ void setup() {
   initPump();
 
   xTaskCreate(
-    task1, // func for the task
-    "Task 1", // description
+    measurementsTask, // func for the task
+    "Measurements", // description
     1000, // stack size
     NULL, //task parameters
     1, // task priority
