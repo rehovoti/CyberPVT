@@ -6,11 +6,12 @@ void setup() {
 
   Serial.begin(9600);
   initPump();
+  initMeasurements();
 
   xTaskCreate(
     measurementsTask, // func for the task
     "Measurements", // description
-    1000, // stack size
+    2048, // stack size
     NULL, //task parameters
     1, // task priority
     NULL // task handle

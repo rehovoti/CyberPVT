@@ -11,6 +11,7 @@ void initPump() {
 }
 
 void pumpTask(void* parameters) {
+  while(1){
     for(int pwd_val=0;pwd_val < 255; pwd_val += 5) {
       Serial.print("Pump Task PWD value: ");
       Serial.println(pwd_val);
@@ -18,3 +19,4 @@ void pumpTask(void* parameters) {
       vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
   }
+}
