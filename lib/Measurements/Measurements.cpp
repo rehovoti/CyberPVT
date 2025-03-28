@@ -16,9 +16,9 @@ void initMeasurements() {
 }
 
 void printTemp() {
-  Serial.print("T(Surface): ");
-  Serial.print(temp[0],3);
-  Serial.println("C");
+  // Serial.print("T(Surface): ");
+  // Serial.print(temp[0],3);
+  // Serial.println("C");
   // Serial.print("T(Water In): ");
   // Serial.println(temp[1]);
   // Serial.print("T(Water Out): ");

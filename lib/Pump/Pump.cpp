@@ -6,8 +6,8 @@ void initPump() {
     pinMode(pump_in1, OUTPUT);
     pinMode(pump_in2, OUTPUT);
     // Pump Direction
-    digitalWrite(pump_in1, LOW);
-    digitalWrite(pump_in2, HIGH);
+    digitalWrite(pump_in1, HIGH);
+    digitalWrite(pump_in2, LOW);
 }
 
 void pumpTask(void* parameters) {
